@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Covid Tracker </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <din class="container">
+        <div class="search">
+            
+            <h6 >ENTER COUNTRY NAME FOR SEARCH</h6>
+            <input type="text" id="input" name="submit">
+          <button id="submit" onclick="take()">SUBMIT</button>
+      
+            <h2> COVID-19 cases in <span id="country"></span> <img src="" id="flag" alt=""></h2>  
+        </div>
+
+        <div class="board">
+            <div class="card a">
+                <i class="fa fa-tachometer"></i>
+                <h5>Active Cases</h5>
+                <span id="active"></span>
+            </div>
+            <div class="card ca">
+                <i class="fa fa-th-list"></i>
+                <h5>Total Cases</h5>
+                <span id="cases"></span>
+            </div>
+            <div class="card cr">
+                <i class="fa fa-times-circle"></i>
+                <h5>Critical Cases</h5>
+                <span id="critical"></span>
+            </div>
+            <div class="card d">
+                <i class="fa fa-times"></i>
+                <h5>Total Deaths</h5>
+                <span id="deaths"></span>
+            </div>
+            <div class="card r">
+                <i class="fa fa-chock-square"></i>
+                <h5>Recovered Cases</h5>
+                <span id="recovered"></span>
+            </div>
+            <div class="card t">
+                <i class="fa fa-eye"></i>
+                <h5>Total Test Done</h5>
+                <span id="tests"></span>
+            </div>
+
+        </div>
+        <span id="copy"> copywrite-reserved @_pandey_avi_</span>
+    </din>
+</body>
+
+</html>
+<script type="text/javascript">
+
+    function take() {
+
+        let p = document.getElementById("input").value
+        let k = ("https://corona.lmao.ninja/v2/countries/" + p)
+        console.log(k)
+
+
+        fetch(k)
+
+            .then((response) => {
+                return response.json();
+            })
+
+            .then((data) => {
+                document.getElementById("flag").src = data.countryInfo.flag;
+                document.getElementById("country").innerHTML = data.country;
+                document.getElementById("cases").innerHTML = data.cases;
+                document.getElementById("critical").innerHTML = data.critical;
+                document.getElementById("deaths").innerHTML = data.deaths;
+                document.getElementById("tests").innerHTML = data.tests;
+                document.getElementById("active").innerHTML = data.active;
+                document.getElementById("recovered").innerHTML = data.recovered;
+
+            })
+    }
+
+</script>

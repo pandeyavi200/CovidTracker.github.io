@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+body:after{
+    position: absolute;
+    content: "";
+    height: 50%;
+    width: 100%;
+    background: #eb5191;
+    top: 0;
+}
+body:before{
+    position: absolute;
+    content: "";
+    height: 50%;
+    width: 100%;
+    background: #fff;
+    bottom: 0;
+}
+.search{
+    
+  display: flex;
+  flex-direction: row;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;   
+    padding-bottom: 20px;
+    
+    margin-bottom: 10px;
+}
+.container{
+    z-index: 1;
+    width: 80%;
+    margin: 0 0;
+    border-radius: 24px;
+    background: #f6f5f0;
+    padding: 1%;
+    height: 500x;
+    box-shadow: 0px 10px 6px -8px rgba(0, 0, 0, 0.75);
+}
+#input{
+    height: 20px;
+    margin-top: 20px;
+  
+}
+.container h6{
+    font-size: 15px;
+    float: left;
+    margin-top: 18px;
+    padding: 5px;
+  
+    
+}
+.container #submit{
+    float: left;
+    height: 27px;
+    width: 80px;
+    
+    margin: 19px 10px;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+.board{
+    column-count: 3;
+    column-gap: 1rem;
+}
+.container h2{
+    float: left;
+   padding-bottom: 20px;
+   margin-bottom: 10px;
+    text-align: right;
+    margin-left: 80px;
+    font-weight: 2000;
+    font-size: 13px;
+    height: 20px;
+}
+img#flag{
+    height: 20px;
+    width: 25px;
+}
+.card{
+    width: 84%;
+    background: #ccc;
+    padding: 8%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+.card.a{
+    background: #41a7ff;
+
+}
+.card.cr{
+    background: #ff3434;
+    
+}
+.card.r{
+    background: #32b336;
+    
+}
+.card.ca{
+    background: #d83f3f;
+    
+}
+.card.d{
+    background: #ff0053;
+    
+}
+.card.t{
+    background: #ffa501;
+    
+}
+.card.span{
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    
+}sq
+.card i{
+    font-size: 3rem;
+}
+#submit{
+    color: rgba(0, 0, 0, 0.75);
+    height: 10px;
+    width: 20px;
+}
+#copy{
+    color: black;
+    font-weight: 700;
+    margin: auto;
+    margin-left: 385px;
+}
+@media screen and (max-width: 768px){
+    .board{
+        column-count: 2;
+    }
+} 
+@media screen and (max-width: 500px){
+    .container{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .board{
+
+        column-count: 1;
+        margin-top: 150px;    
+        
+    }
+    .card{
+        height: 70px;
+        width: 80%;
+        margin-top: 10px;
+        
+    }
+    .search{
+        
+        width: 100%;
+        
+        flex-direction: column;
+       
+        margin-top: 500px;
+        
+    }
+    .search h6{
+    padding-top: 50px;
+    margin: auto;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+#copy{
+    margin: auto;
+    font-size: 10px;
+}
+
+
+
+.search h2{
+    margin: auto;
+    font-size: 12px;
+    
+}
+.search #input{
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 20px;
+  
+  }
+  .search #submit{
+      width: 15%;
+      padding: auto;
+      margin-top: 5px;
+      margin-left: 20px;   
+      font-size: 8px;
+      margin-bottom: 20px;
+      
+  }
+
+}
